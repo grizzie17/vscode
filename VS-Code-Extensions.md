@@ -2,7 +2,7 @@ The following is a list of some favorite extensions for VSCode.
 
 * [`autoconf`](#autoconf) - syntax highlighting for autoconf, M4, and automake files (autotools)
 * [`bitbakers-dozen`](#bitbakers-dozen) - syntax highlighting for bitbake recipes and configuration files.
-* [`Bracket Pair Colorizer`](#bracket-pair-colorizer) - alternate colors for nested brackets/parenthesis.
+* [`Bracket Pair Colorizer 2`](#bracket-pair-colorizer) - alternate colors for nested brackets/parenthesis.
 * [**`C/C++`**](#cc) - IntelliSense, debugging, code browser, support for loadable header file paths, etc
 * [`C/C++ Advanced Lint`](#cc-advanced-lint) - advanced, modern, static analysis extension that supports a number of back-end analyzer programs
 * `Code Spell Checker` - highlight words (including camel-case) that are unknown
@@ -27,29 +27,29 @@ The following is a list of some favorite extensions for VSCode.
 
 ## autoconf ##
 
-![autoconf](icons/autoconf_icon.png)  
-By: maelvalais
+[![autoconf ](icons/autoconf_icon.png)  
+By: maelvalais](https://marketplace.visualstudio.com/items?itemName=maelvalais.autoconf)
 
 -------------------
 
 ## bitbakers-dozen ##
 
-![bitbakers-dozen](icons/bitbakers-dozen.png)  
-By: Bernard Bergan
+[![bitbakers-dozen ](icons/bitbakers-dozen.png)  
+By: Bernard Bergan](https://marketplace.visualstudio.com/items?itemName=bbergan.bitbakers-dozen)
 
 -------------------
 
-## Bracket Pair Colorizer ##
+## Bracket Pair Colorizer 2 ##
 
-![Bracket Pair Colorizer](icons/bracket-pair-colorizer_icon.png)  
-By: CoenraadS
+[![Bracket Pair Colorizer 2](icons/bracket-pair-colorizer_icon.png)  
+By: CoenraadS](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
 
 -------------------
 
 ## C/C++ ##
 
-![C/C++](icons/C_Cpp_icon.png)  
-By: Microsoft
+[![C/C++ ](icons/C_Cpp_icon.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
 The `C/C++` extension enables a host of services:
 
@@ -80,7 +80,7 @@ Click on the squarish icon on the left-hand side of the workspace.  In the searc
 
 From within your sandbox in `vscode`, press the "F1" key and enter "C/CPP" and select "C/Cpp: Add Configuration" or "C/Cpp: Edit Configurations"
 
-**`.vscode/c_cpp_properties.json`**
+**`.vscode/c_cpp_properties.json`**  
 ```JSON
 {
   "configurations": [
@@ -129,12 +129,12 @@ For help configuring the debugger see [Configuring launch.json for C/C++ debuggi
 
 ## C/C++ Advanced Lint ##
 
-![C/C++ Advanced Lint](icons/C-Cpp-FlyLint_icon.png)  
-By: Joseph Benden
+[![C/C++ Advanced Lint](icons/C-Cpp-FlyLint_icon.png)  
+By: Joseph Benden](https://marketplace.visualstudio.com/items?itemName=jbenden.c-cpp-flylint)
 
 This extension can be used to accomplish the same as `cppcheck` on the Linux side.  For that matter this extension can use several different checkers/linters including `cppcheck`.
 
-```JSON-with-comments
+```JSON
 {
     "c-cpp-flylint.cppcheck.enable": true,
     "c-cpp-flylint.cppcheck.executable": "C:/path/to/cppcheck.exe",
@@ -149,8 +149,8 @@ This extension can be used to accomplish the same as `cppcheck` on the Linux sid
 
 ## EditorConfig for VS Code ##
 
-![EditorConfig for VS Code](icons/EditorConfig_icon.png)  
-By: EditorConfig
+[![EditorConfig for VS Code](icons/EditorConfig_icon.png)  
+By: EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
 This extension is used to process the `.editorconfig` files and apply the contained rules to `vscode`.  The Supported properties are:
 
@@ -172,8 +172,8 @@ Select the squarish icon on the left and enter "editorconfig" into the search bo
 
 ## ftp-sync ##
 
-![ftp-sync](icons/ftp-sync_icon.png)  
-By: Lukasz Wronski
+[![ftp-sync ](icons/ftp-sync_icon.png)  
+By: Lukasz Wronski](https://marketplace.visualstudio.com/items?itemName=lukasz-wronski.ftp-sync)
 
 ### install `ftp-sync` extension ###
 
@@ -218,10 +218,10 @@ Press the `F1` key and enter "ftp-sync" and select the "ftp-sync: Init" command.
 
 ------------------------------
 
-## GitHub Issues and PRs
+## GitHub Issues and PRs ##
 
-![GitHub Issues and PRs](icons/github-issues_icon.png)  
-By: Microsoft
+[![GitHub Issues and PRs](icons/github-issues_icon.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.github-issues-prs)
 
 ```JSON
 {
@@ -237,8 +237,8 @@ By: Microsoft
 
 ## GitHub Pull Requests ##
 
-![GitHub Pull Requests](icons/github-pull-requests_icon.png)  
-By: GitHub
+[![GitHub Pull Requests](icons/github-pull-requests_icon.png)  
+By: GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 
 Unbelievably great extension that allows you to do thorough *Pull Request* reviews right from VSCode.
 
@@ -246,7 +246,7 @@ Unbelievably great extension that allows you to do thorough *Pull Request* revie
 {
   "githubPullRequests.hosts": [
     {
-      "host": "https://ghe.int.vertivco.com",
+      "host": "https://github.com",
       "username": "your-user-name"
     }
   ]
@@ -257,8 +257,8 @@ Unbelievably great extension that allows you to do thorough *Pull Request* revie
 
 ## GitLens ##
 
-![GitLens](icons/gitlens-icon.png)  
-By: Eric Amodio
+[![GitLens ](icons/gitlens-icon.png)  
+By: Eric Amodio](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
 ```JSON
 {
@@ -275,30 +275,30 @@ By: Eric Amodio
 
 ## indent-rainbow ##
 
-![indent-rainbow](icons/indent-rainbow.png)  
-By: oderwat
+[![indent-rainbow ](icons/indent-rainbow.png)  
+By: oderwat](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 
 
 ------------------------------
 
 ## Markdown All in One ##
 
-![Markdown All in One](icons/Markdown-mark.png)  
-By: Yu Zhang
+[![Markdown All in One](icons/Markdown-mark.png)  
+By: Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
 ------------------------------
 
 ## Material Icon Theme ##
 
-![Material Icon Theme](icons/Material-Icon-Theme.png)  
-By: Philipp Kief
+[![Material Icon Theme](icons/Material-Icon-Theme.png)  
+By: Philipp Kief](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
 ------------------------------
 
 ## Python ##
 
-![Python](icons/python_icon.png)  
-By: Microsoft
+[![Python ](icons/python_icon.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 ```JSON
 {
@@ -316,15 +316,15 @@ By: Microsoft
 
 ## RECORE ##
 
-![RECORE](icons/recore_icon.png)  
-By: Alibaba XUX
+[![RECORE ](icons/recore_icon.png)  
+By: Alibaba XUX](https://marketplace.visualstudio.com/items?itemName=alixux.recore)
 
 ------------------------------
 
 ## Remote Workspace ##
 
-![Remote Workspace](icons/remote-workspac_icon.png)  
-By: Marcel J. Kloubert
+[![Remote Workspace](icons/remote-workspac_icon.png)  
+By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
 
 Adds functionality to the built-in capabilities of `vscode` regarding workspaces.
 
@@ -332,15 +332,15 @@ Adds functionality to the built-in capabilities of `vscode` regarding workspaces
 
 ## SVG ##
 
-![SVG Viewer](icons/svg-viewer_icon.png)  
-By: cssho
+[![SVG Viewer](icons/svg-viewer_icon.png)  
+By: cssho](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
 
 --------------------------------
 
 ## SVN ##
 
-![Subversion](icons/subversion.png)  
-By: Chris Johnston
+[![Subversion ](icons/subversion.png)  
+By: Chris Johnston](https://marketplace.visualstudio.com/items?itemName=johnstoncode.svn-scm)
 
 ```JSON
 {
@@ -354,8 +354,8 @@ By: Chris Johnston
 
 ## Uncrustify ##
 
-![Uncrustify](icons/uncrustify.png)  
-By: LaurentTreguier
+[![Uncrustify ](icons/uncrustify.png)  
+By: LaurentTreguier](https://marketplace.visualstudio.com/items?itemName=LaurentTreguier.uncrustify)
 
 
 This extension is really handy as it will allow you to quickly change your code to adhere to coding standards.
