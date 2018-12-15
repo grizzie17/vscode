@@ -1,18 +1,65 @@
 ## Install `MSYS2` ##
 
-Goto https://www.msys2.org and follow the instructions for downloading and setup of msys2-x86_64.  Once you have gotten that downloaded and setup then you can create your local sandbox.  MSYS2 does not correctly handle symbolic-links so we have provided a workaround/fix in the [msys2 directory](msys2) of this repository.
+Goto https://www.msys2.org and follow the instructions for downloading and setup of msys2-x86_64.  Once you have gotten that downloaded and setup then you can create your local sandbox.  MSYS2 does not correctly handle symbolic-links so we have provided a workaround/fix in the [msys2](msys2) directory of this repository.
 
 To make sure that your copy of MSYS2 is up-to-date you can open the `MSYS2 MinGW 64-bit` app and enter the following:
 
 ```sh
-pacman -Syu
+pacman -Syuu
 ```
 
-There are some other required packages that we will need to create a sandbox.
+### Search Package Manager ###
 
 ```sh
-pacman -S git svn tar
+pacman -Ss <package-name>
 ```
+
+
+### Install Development Packages ###
+
+There are some other required packages that we will need.
+
+```sh
+pacman -S git svn tar rsync
+```
+
+
+```sh
+pacman -S base-devel
+pacman -S mingw-w64-x86_64-toolchain
+```
+
+```sh
+pacman -S mingw-w64-x86_64-boost
+```
+
+```sh
+pacman -S mingw-w64-x86_64-python2
+pacman -S mingw-w64-x86_64-python2-docutils
+pacman -S mingw-w64-x86_64-python3
+pacman -S mingw-w64-x86_64-python3-docutils
+```
+
+#### Autotools ####
+
+```sh
+pacman -S make pkgconfig autoconf automake libtool intltool
+```
+
+#### Libraries ####
+
+```sh
+pacman -S mingw-w64-x86_64-freetype
+pacman -S mingw-w64-x86_64-physfs
+pacman -S mingw-w64-x86_64-libvorbis
+pacman -S mingw-w64-x86_64-flac
+pacman -S mingw-w64-x86_64-dumb
+pacman -S mingw-w64-x86_64-libtheora
+pacman -S mingw-w64-x86_64-libjpeg-turbo
+pacman -S mingw-w64-x86_64-gtk2
+pacman -S mingw-w64-x86_64-gtk3
+```
+
 
 ### Fix the symlink problem ###
 
@@ -44,8 +91,7 @@ Close MSYS window and reopen
 
 One handy trick that I use is create a sub-directory in `Documents` for your new sandbox.
 Which provides easy access on your PC.  Then create a symlink from the msys2 `/home/<yourname>` directory to /c/users/yourname/Documents/yoursandbox.
-That way you can easily open msys and cd to yoursandbox.  You will not be building, but many of the other
-sandbox commands work.
+That way you can easily open msys and cd to yoursandbox.
 
 ## Create local (PC) sandbox ##
 

@@ -1,27 +1,5 @@
 The following is a list of some favorite extensions for VSCode.
 
-* [`autoconf`](#autoconf) - syntax highlighting for autoconf, M4, and automake files (autotools)
-* [`bitbakers-dozen`](#bitbakers-dozen) - syntax highlighting for bitbake recipes and configuration files.
-* [`Bracket Pair Colorizer 2`](#bracket-pair-colorizer) - alternate colors for nested brackets/parenthesis.
-* [**`C/C++`**](#cc) - IntelliSense, debugging, code browser, support for loadable header file paths, etc
-* [`C/C++ Advanced Lint`](#cc-advanced-lint) - advanced, modern, static analysis extension that supports a number of back-end analyzer programs
-* `Code Spell Checker` - highlight words (including camel-case) that are unknown
-* `Doxygen` - keyword highlighting and IntelliSense for adding doxygen commentary
-* [`EditorConfig for VS Code`](#editorconfig-for-vs-code) - process `.editorconfig` and apply settings to vs-code
-* [**`ftp-sync`**](#ftp-sync) - autosync your work to/from remote ftp/sftp servers
-* [`GitHub Issues and PRs`](#github-issues-and-prs) - View the issues and PRs assigned to you
-* [`GitHub Pull Requests`](#github-pull-requests) - Review Pull Requests from your favorite editor
-* [`GitLens`](#gitlens) - Integration into the editor and the explorer of various git information.  Think: git blame supercharged
-* [`indent-rainbow`](#indent-rainbow) - Make your indention clearly standout.
-* `Live HTML Previewer` - Edit and preview HTML documents
-* [`Markdown All in One`](#markdown-all-in-one) - Markdown linting and style checking along with syntax highlighting.  This also provides a live preview
-* [`Material Icon Theme`](material-icon-theme) - Great set of icons and looks really great in dark mode.
-* [`Python`](#python) - Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit tests, and more
-* [`Remote Workspace`](#remote-workspace) - multi-protocol support (like, Azure, S3, FTP(S), SFTP...) for handling remote files like local ones.
-* [`Sort Lines`](#sort-lines) - various sorting routines
-* [`SVN`](#svn) - integrated subversion
-* [`Uncrustify`](#uncrustify) - nicely handles the coding standards for the Renaissance products
-* `Visual Studio Keymap` - popular visual studio keybindings
 
 -------------------
 
@@ -30,6 +8,8 @@ The following is a list of some favorite extensions for VSCode.
 [![autoconf ](icons/autoconf_icon.png)  
 By: maelvalais](https://marketplace.visualstudio.com/items?itemName=maelvalais.autoconf)
 
+Syntax highlighting for autoconf, M4, and automake files (autotools)
+
 -------------------
 
 ## bitbakers-dozen ##
@@ -37,12 +17,16 @@ By: maelvalais](https://marketplace.visualstudio.com/items?itemName=maelvalais.a
 [![bitbakers-dozen ](icons/bitbakers-dozen.png)  
 By: Bernard Bergan](https://marketplace.visualstudio.com/items?itemName=bbergan.bitbakers-dozen)
 
+Syntax highlighting for bitbake recipes and configuration files.
+
 -------------------
 
 ## Bracket Pair Colorizer 2 ##
 
 [![Bracket Pair Colorizer 2](icons/bracket-pair-colorizer_icon.png)  
 By: CoenraadS](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+
+Alternate colors for nested brackets/parenthesis.
 
 -------------------
 
@@ -104,16 +88,9 @@ From within your sandbox in `vscode`, press the "F1" key and enter "C/CPP" and s
         "${workspaceFolder}\\**\\**",
         "${workspaceFolder}\\**\\**\\**",
         "${workspaceFolder}\\**\\**\\**\\**",
-        "${workspaceFolder}\\**\\**\\**\\**\\**",
-        "C:/msys64/usr/lib/gcc/x86_64-pc-msys/7.3.0/include/c++",
-        "C:/msys64/usr/lib/gcc/x86_64-pc-msys/7.3.0/include/c++/x86_64-pc-msys",
-        "C:/msys64/usr/lib/gcc/x86_64-pc-msys/7.3.0/include/c++/backward",
-        "C:/msys64/usr/lib/gcc/x86_64-pc-msys/7.3.0/include",
-        "C:/msys64/usr/lib/gcc/x86_64-pc-msys/7.3.0/include-fixed",
-        "C:/msys64/usr/include",
-        "C:/msys64/usr/include/w32api"
+        "${workspaceFolder}\\**\\**\\**\\**\\**"
       ]
-    },
+    }
   ],
   "version": 4
 }
@@ -144,6 +121,12 @@ This extension can be used to accomplish the same as `cppcheck` on the Linux sid
     "c-cpp-flylint.run": "onType"
 }
 ```
+
+-----------------------
+
+## Doxygen ##
+
+Keyword highlighting and intellisense for adding doxygen commentary.
 
 -----------------------
 
@@ -223,6 +206,8 @@ Press the `F1` key and enter "ftp-sync" and select the "ftp-sync: Init" command.
 [![GitHub Issues and PRs](icons/github-issues_icon.png)  
 By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.github-issues-prs)
 
+View the issues assigned to you
+
 ```JSON
 {
   "github.repositories": [
@@ -260,6 +245,8 @@ Unbelievably great extension that allows you to do thorough *Pull Request* revie
 [![GitLens ](icons/gitlens-icon.png)  
 By: Eric Amodio](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
+Integration into the editor and the explorer of various git information.  Think: git blame supercharged.
+
 ```JSON
 {
   "gitlens.advanced.messages": {
@@ -278,6 +265,7 @@ By: Eric Amodio](https://marketplace.visualstudio.com/items?itemName=eamodio.git
 [![indent-rainbow ](icons/indent-rainbow.png)  
 By: oderwat](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 
+Make your indention clearly standout.
 
 ------------------------------
 
@@ -286,6 +274,8 @@ By: oderwat](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-
 [![Markdown All in One](icons/Markdown-mark.png)  
 By: Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
+Markdown linting and style checking along with syntax highlighting.  This also provides a live preview.
+
 ------------------------------
 
 ## Material Icon Theme ##
@@ -293,12 +283,16 @@ By: Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdow
 [![Material Icon Theme](icons/Material-Icon-Theme.png)  
 By: Philipp Kief](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
+Great set of icons and looks really great in dark mode.
+
 ------------------------------
 
 ## Python ##
 
 [![Python ](icons/python_icon.png)  
 By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit tests, and more...
 
 ```JSON
 {
@@ -326,7 +320,16 @@ By: Alibaba XUX](https://marketplace.visualstudio.com/items?itemName=alixux.reco
 [![Remote Workspace](icons/remote-workspac_icon.png)  
 By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
 
-Adds functionality to the built-in capabilities of `vscode` regarding workspaces.
+Adds functionality to the built-in capabilities of `vscode` regarding workspaces. Multi-protocol support (e.g., Azure, S3, FTP(s), SFTP, ...) for handling remote files like local files.
+
+--------------------------------
+
+## Sort lines ##
+
+[![Sort Lines](icons/sort-lines_icon.png)  
+By: Daniel Imms](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
+
+Var sorting options.
 
 --------------------------------
 
@@ -341,6 +344,8 @@ By: cssho](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgv
 
 [![Subversion ](icons/subversion.png)  
 By: Chris Johnston](https://marketplace.visualstudio.com/items?itemName=johnstoncode.svn-scm)
+
+Integrated `subversion`.
 
 ```JSON
 {
@@ -387,3 +392,5 @@ Then add the following to your "WORKSPACE SETTINGS"
 > This is assuming that you are using the standard sandbox.  If not correct for the location of the downloaded `beautify` repository.
 
 Then all you need to do is right mouse on an open document and select "Format Document"... Tada! formatted document.
+
+
