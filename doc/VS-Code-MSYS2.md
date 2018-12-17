@@ -56,9 +56,11 @@ pacman -S <package-list>
 There are some packages that we will need.
 
 * git
+* rsync
 * svn
 * tar
-* rsync
+* unzip
+* wget
 
 
 ```sh
@@ -80,17 +82,17 @@ pacman -S git svn tar rsync
 
 * mingw-w64-x86_64-python2
 * mingw-w64-x86_64-python2-docutils
-* mingw-w64-x86_64-python3
 * mingw-w64-x86_64-python3-docutils
 
 ### Autotools ###
 
+* autoconf
+* autoconf-archive
+* automake
+* intltool
+* libtool
 * make
 * pkgconfig
-* autoconf
-* automake
-* libtool
-* intltool
 
 ### Libraries ###
 
