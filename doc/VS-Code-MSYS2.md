@@ -1,73 +1,12 @@
-## Install `MSYS2` ##
+# Install `MSYS2` #
 
-Goto https://www.msys2.org and follow the instructions for downloading and setup of msys2-x86_64.  Once you have gotten that downloaded and setup then you can create your local sandbox.  MSYS2 does not correctly handle symbolic-links so we have provided a workaround/fix in the [msys2](msys2) directory of this repository.
+Goto https://www.msys2.org and follow the instructions for downloading and setup of msys2-x86_64.  Once you have gotten that downloaded and setup then you can create your local sandbox.  MSYS2 does not correctly handle symbolic-links so we have provided a workaround/fix in the [msys2](../msys2/README.md) directory of this repository.
 
-To make sure that your copy of MSYS2 is up-to-date you can open the `MSYS2 MinGW 64-bit` app and enter the following:
-
-```sh
-pacman -Syuu
-```
-
-### Search Package Manager ###
+## Fix the symlink problem ##
 
 ```sh
-pacman -Ss <package-name>
-```
-
-
-### Install Development Packages ###
-
-There are some other required packages that we will need.
-
-```sh
-pacman -S git svn tar rsync
-```
-
-
-```sh
-pacman -S base-devel
-pacman -S mingw-w64-x86_64-toolchain
-```
-
-```sh
-pacman -S mingw-w64-x86_64-boost
-```
-
-```sh
-pacman -S mingw-w64-x86_64-python2
-pacman -S mingw-w64-x86_64-python2-docutils
-pacman -S mingw-w64-x86_64-python3
-pacman -S mingw-w64-x86_64-python3-docutils
-```
-
-#### Autotools ####
-
-```sh
-pacman -S make pkgconfig autoconf automake libtool intltool
-```
-
-#### Libraries ####
-
-```sh
-pacman -S mingw-w64-x86_64-freetype
-pacman -S mingw-w64-x86_64-physfs
-pacman -S mingw-w64-x86_64-libvorbis
-pacman -S mingw-w64-x86_64-flac
-pacman -S mingw-w64-x86_64-dumb
-pacman -S mingw-w64-x86_64-libtheora
-pacman -S mingw-w64-x86_64-libjpeg-turbo
-pacman -S mingw-w64-x86_64-gtk2
-pacman -S mingw-w64-x86_64-gtk3
-```
-
-
-### Fix the symlink problem ###
-
-```sh
-cd
-git clone https://ghe.int.vertivco.com/eng-core/tools-and-practices-wiki
 mkdir bin
-cp tools-and-practices-wiki/msys2/ln-msys.sh bin/ln
+cp ln-msys.sh bin/ln
 chmod +x bin/ln
 ```
 
@@ -86,30 +25,93 @@ uncomment the line `#MSYS=winsymlinks...`
 
 Close MSYS window and reopen
 
+## PACMAN ##
 
-### Create symlinks in your home directory ###
+**pac**kage **man**ager
+
+
+## Assure Msys is Up-to-Date ##
+
+To make sure that your copy of MSYS2 is up-to-date you can open the `MSYS2 MinGW 64-bit` app and enter the following:
+
+```sh
+pacman -Syuu
+```
+
+## Search for Packages using `pacman` ##
+
+Msys provides an extradorinary list of already available packages.  Use `pacman` to search if the package that you want is already available.
+
+```sh
+pacman -Ss <package-name>
+```
+
+
+## Install Packages using `pacman` ##
+
+```sh
+pacman -S <package-list>
+```
+
+There are some packages that we will need.
+
+* git
+* svn
+* tar
+* rsync
+
+
+```sh
+pacman -S git svn tar rsync
+```
+
+## Install Development Packages ##
+
+
+* base-devel
+* mingw-w64-x86_64-toolchain
+
+---
+
+* mingw-w64-x86_64-boost
+
+---
+
+
+* mingw-w64-x86_64-python2
+* mingw-w64-x86_64-python2-docutils
+* mingw-w64-x86_64-python3
+* mingw-w64-x86_64-python3-docutils
+
+### Autotools ###
+
+* make
+* pkgconfig
+* autoconf
+* automake
+* libtool
+* intltool
+
+### Libraries ###
+
+* mingw-w64-x86_64-freetype
+* mingw-w64-x86_64-physfs
+* mingw-w64-x86_64-libvorbis
+* mingw-w64-x86_64-flac
+* mingw-w64-x86_64-dumb
+* mingw-w64-x86_64-libtheora
+* mingw-w64-x86_64-libjpeg-turbo
+* mingw-w64-x86_64-gtk2
+* mingw-w64-x86_64-gtk3
+
+
+## Create symlinks in your home directory ##
 
 One handy trick that I use is create a sub-directory in `Documents` for your new sandbox.
 Which provides easy access on your PC.  Then create a symlink from the msys2 `/home/<yourname>` directory to /c/users/yourname/Documents/yoursandbox.
 That way you can easily open msys and cd to yoursandbox.
 
-## Create local (PC) sandbox ##
+## Ready to go ##
 
-Open the `MSYS2 MinGW 64-bit` app.
+At this point your copy of Msys should be ready to use to build for Windows PC.  There are still more settings that need to set before you can use it with VSCode.
 
-```sh
-# please note the directory is your 'Documents' directory on your PC
-cd /c/Users/yourname/Documents
-
-mkdir yoursandbox
-cd yoursandbox
-svn checkout https://dcssvncol.int.vertivco.com/svn/DCIMA/trunk content
-./content/pull.sh
-```
-
-And if you have corrected the symlink problem using the instructions above, you might consider
-```sh
-ln -s $PWD ~/yoursandbox
-```
-> WARNING: do not do try to create a symbolic link if you have not fixed the MSYS2 problem 
-> because MSYS2 will copy your entire sandbox to your home directory.

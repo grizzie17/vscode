@@ -4,7 +4,7 @@
 
 * [Introduction](doc/README.md)
 * [Basic Settings/Preferences](doc/VS-Code-Settings.md)
-* [Recommended Extensions](doc/VS-Code-Extensions.md)
+* [Favorite Extensions](doc/VS-Code-Extensions.md)
 
 ## Workflows ##
 
