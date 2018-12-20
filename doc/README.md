@@ -1,3 +1,7 @@
+[Go Home](../README.md)
+
+---
+
 # Visual Studio Code #
 
 [Visual Studio Code](https://code.visualstudio.com) is a totally opensource project that is sponsored by Microsoft.
@@ -33,3 +37,9 @@ Then you may want to visit the [Documents](https://code.visualstudio.com/docs) p
 ## Next ##
 
 Visit our [Settings](VS-Code-Settings) page and our [Extensions](VS-Code-Extensions) page
+
+
+---
+
+[Go Home](../README.md)
+

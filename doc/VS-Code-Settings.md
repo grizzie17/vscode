@@ -1,3 +1,9 @@
+[Go Home](../README.md)
+
+---
+
+# Settings #
+
 Settings in VS-Code is hierarchical with three tiers.  There are **User Settings** which apply to all *Workspaces* (sandboxes) for the user. There are **Workspace Settings** that apply to the current sandbox.  Then there are **Folder Settings**.  Settings are stored in JSON files or JSON-with-comments files.  Many of the more common settings have a nice set of configuration pages that allow you to select settings without editing the JSON directly.  For brevity and consistency, I will be using the JSON to represent the settings (unless it involves an extension
 
 Settings for editors are very personal.  But hopefully, these settings may inspire you as you decide on your settings.
@@ -124,3 +130,8 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 
 `Recore` is actually an extension that supports the `Visix` language, but they include a **really** nice set of icons
 that look great in the dark theme.  And they include a wide variety of icons that are specialized for different folders.
+
+---
+
+[Go Home](../README.md)
+

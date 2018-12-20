@@ -1,3 +1,7 @@
+[Go Home](../README.md)
+
+---
+
 # Remote Workflows with VS-Code #
 
 Any time you are editing Linux files using VS-Code for Windows you are going to need use some sort of remote workflow.
@@ -47,5 +51,11 @@ So, as an example you create a sandbox on `hsv-tor3`, your workspace settings mi
 And after you select from the menu "File->Open Workspace" and select your workspace file; you will have a vs-code file explorer that behaves correctly but is actually referencing the remote file-system.
 
 > The primary disadvantage is the lack of integrated git tools.
+
+
+---
+
+[Go Home](../README.md)
+
 
 

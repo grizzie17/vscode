@@ -1,3 +1,7 @@
+[Go Home](../README.md)
+
+---
+
 # VS-Code Building on Windows #
 
 
@@ -32,3 +36,8 @@
 }
 
 ```
+
+
+---
+
+[Go Home](../README.md)

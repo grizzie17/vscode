@@ -1,3 +1,6 @@
+[Go Home](../README.md)
+# Extensions #
+
 The following is a list of some favorite extensions for VSCode.
 
 
@@ -392,5 +395,9 @@ Then add the following to your "WORKSPACE SETTINGS"
 > This is assuming that you are using the standard sandbox.  If not correct for the location of the downloaded `beautify` repository.
 
 Then all you need to do is right mouse on an open document and select "Format Document"... Tada! formatted document.
+
+---
+[Go Home](../README.md)
+
 
 

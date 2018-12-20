@@ -1,3 +1,8 @@
+[Go Home](../README.md)
+
+---
+
+
 # Remote Debugging #
 
 We are talking generally about remote debugging and also specifically
@@ -237,4 +242,10 @@ Modification of the UMG cli, menu and app_dispatch commands.
 ```
 
 Need to login to UMG **`admin`** account without using password (in other words using the .ssh/id_rsa key).
+
+
+---
+
+[Go Home](../README.md)
+
 

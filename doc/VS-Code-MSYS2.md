@@ -1,3 +1,4 @@
+[Go Home](../README.md)
 # Install `MSYS2` #
 
 Goto https://www.msys2.org and follow the instructions for downloading and setup of msys2-x86_64.  Once you have gotten that downloaded and setup then you can create your local sandbox.  MSYS2 does not correctly handle symbolic-links so we have provided a workaround/fix in the [msys2](../msys2/README.md) directory of this repository.
@@ -116,4 +117,8 @@ That way you can easily open msys and cd to yoursandbox.
 ## Ready to go ##
 
 At this point your copy of Msys should be ready to use to build for Windows PC.  There are still more settings that need to set before you can use it with VSCode.
+
+## Home ##
+
+[Go Home](../README.md)
 
