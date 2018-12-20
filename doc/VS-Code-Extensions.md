@@ -3,28 +3,22 @@
 
 The following is a list of some favorite extensions for VSCode.
 
+* [Appearance](#appearance)
+* [Development](#development)
+* [Files](#files)
+* [Repositories](#repositories)
+* [Utilities](#utilities)
+
+## Install an Extension ##
+
+Click on the squarish icon on the left-hand side of the workspace.  In the search bar bar at the top enter the name of the desired extension.  Pick the desired extension and then click on the "install" button.  Then click on the "Refresh to Load" button.  
+
+
+# Appearance #
 
 -------------------
 
-## autoconf ##
-
-[![autoconf ](icons/autoconf_icon.png)  
-By: maelvalais](https://marketplace.visualstudio.com/items?itemName=maelvalais.autoconf)
-
-Syntax highlighting for autoconf, M4, and automake files (autotools)
-
--------------------
-
-## bitbakers-dozen ##
-
-[![bitbakers-dozen ](icons/bitbakers-dozen.png)  
-By: Bernard Bergan](https://marketplace.visualstudio.com/items?itemName=bbergan.bitbakers-dozen)
-
-Syntax highlighting for bitbake recipes and configuration files.
-
--------------------
-
-## Bracket Pair Colorizer 2 ##
+### Bracket Pair Colorizer 2 ###
 
 [![Bracket Pair Colorizer 2](icons/bracket-pair-colorizer_icon.png)  
 By: CoenraadS](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
@@ -33,7 +27,57 @@ Alternate colors for nested brackets/parenthesis.
 
 -------------------
 
-## C/C++ ##
+## indent-rainbow ##
+
+[![indent-rainbow ](icons/indent-rainbow.png)  
+By: oderwat](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+
+Make your indention clearly standout.
+
+-------------------
+
+### Material Icon Theme ###
+
+[![Material Icon Theme](icons/Material-Icon-Theme.png)  
+By: Philipp Kief](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+
+Great set of icons and looks really great in dark mode.
+
+-------------------
+
+### RECORE ###
+
+[![RECORE ](icons/recore_icon.png)  
+By: Alibaba XUX](https://marketplace.visualstudio.com/items?itemName=alixux.recore)
+
+-------------------
+
+
+
+# Development #
+
+-------------------
+
+### autoconf ###
+
+[![autoconf ](icons/autoconf_icon.png)  
+By: maelvalais](https://marketplace.visualstudio.com/items?itemName=maelvalais.autoconf)
+
+Syntax highlighting for autoconf, M4, and automake files (autotools)
+
+-------------------
+
+### bitbakers-dozen ###
+
+[![bitbakers-dozen ](icons/bitbakers-dozen.png)  
+By: Bernard Bergan](https://marketplace.visualstudio.com/items?itemName=bbergan.bitbakers-dozen)
+
+Syntax highlighting for bitbake recipes and configuration files.
+
+-------------------
+
+
+### C/C++ ###
 
 [![C/C++ ](icons/C_Cpp_icon.png)  
 By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
@@ -59,11 +103,8 @@ The `C/C++` extension enables a host of services:
   * Core dump debugging support
   * Executing GDB or MI commands directly when using 'C++ (GDB/LLDB)' debugging environment
 
-### Install `C/C++` extension ###
 
-Click on the squarish icon on the left-hand side of the workspace.  In the search bar bar at the top enter "C/C++".  You should see purple circle with a white bar across the middle with C/C++ emblazoned.  Click on the "install" button.  Then click on the "Refresh to Load" button.  
-
-### Configure `C/C++` extension ###
+#### Configure `C/C++` extension ####
 
 From within your sandbox in `vscode`, press the "F1" key and enter "C/CPP" and select "C/Cpp: Add Configuration" or "C/Cpp: Edit Configurations"
 
@@ -101,13 +142,13 @@ From within your sandbox in `vscode`, press the "F1" key and enter "C/CPP" and s
 
 The previous is an example that can be used.  An even better example includes the header files from the product (such as UMG, Firebird, or whatever).
 
-### Configuring launch.json for debugging ###
+#### Configuring launch.json for debugging ####
 
 For help configuring the debugger see [Configuring launch.json for C/C++ debugging](https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md)
 
 -----------------------
 
-## C/C++ Advanced Lint ##
+### C/C++ Advanced Lint ###
 
 [![C/C++ Advanced Lint](icons/C-Cpp-FlyLint_icon.png)  
 By: Joseph Benden](https://marketplace.visualstudio.com/items?itemName=jbenden.c-cpp-flylint)
@@ -127,13 +168,41 @@ This extension can be used to accomplish the same as `cppcheck` on the Linux sid
 
 -----------------------
 
-## Doxygen ##
+### Markdown All in One ###
 
-Keyword highlighting and intellisense for adding doxygen commentary.
+[![Markdown All in One](icons/Markdown-mark.png)  
+By: Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
------------------------
+Markdown linting and style checking along with syntax highlighting.  This also provides a live preview.
 
-## EditorConfig for VS Code ##
+------------------------------
+
+### Python ###
+
+[![Python ](icons/python_icon.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit tests, and more...
+
+```JSON
+{
+  "python.autoComplete.addBrackets": true,
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+}
+```
+
+------------------------------
+
+# Files #
+
+---
+
+### EditorConfig for VS Code ###
 
 [![EditorConfig for VS Code](icons/EditorConfig_icon.png)  
 By: EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
@@ -149,25 +218,13 @@ This extension is used to process the `.editorconfig` files and apply the contai
 
 For more information on `.editorconfig` files see [EditorConfig site](https://editorconfig.org/)
 
-### install `EditorConfig for VS Code` extension ###
-
-Select the squarish icon on the left and enter "editorconfig" into the search box at the top. You are looking for the extension by "EditorConfig".  Click "Install" and then click "Refresh" button.
-
-
 ------------------------------
 
-## ftp-sync ##
+### ftp-sync ###
 
 [![ftp-sync ](icons/ftp-sync_icon.png)  
 By: Lukasz Wronski](https://marketplace.visualstudio.com/items?itemName=lukasz-wronski.ftp-sync)
 
-### install `ftp-sync` extension ###
-
-Select the squarish icon on the left of the workspace and enter "ftp-sync" in the search box at the top.  You are looking for the extension by "Lukasz Wronski".  Click "Install" and then click "Refresh to Load" button.
-
-See the section below for configuring the `ftp-sync` extension for your sandbox.
-
-### configure `ftp-sync` extension ###
 
 Open `vscode` in your new sandbox.
 Press the `F1` key and enter "ftp-sync" and select the "ftp-sync: Init" command.
@@ -204,7 +261,21 @@ Press the `F1` key and enter "ftp-sync" and select the "ftp-sync: Init" command.
 
 ------------------------------
 
-## GitHub Issues and PRs ##
+### Remote Workspace ###
+
+[![Remote Workspace](icons/remote-workspac_icon.png)  
+By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
+
+Adds functionality to the built-in capabilities of `vscode` regarding workspaces. Multi-protocol support (e.g., Azure, S3, FTP(s), SFTP, ...) for handling remote files like local files.
+
+--------------------------------
+
+
+# Repositories #
+
+---
+
+### GitHub Issues and PRs ###
 
 [![GitHub Issues and PRs](icons/github-issues_icon.png)  
 By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.github-issues-prs)
@@ -223,7 +294,7 @@ View the issues assigned to you
 
 ------------------------------
 
-## GitHub Pull Requests ##
+### GitHub Pull Requests ###
 
 [![GitHub Pull Requests](icons/github-pull-requests_icon.png)  
 By: GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
@@ -243,7 +314,7 @@ Unbelievably great extension that allows you to do thorough *Pull Request* revie
 
 ------------------------------
 
-## GitLens ##
+### GitLens ###
 
 [![GitLens ](icons/gitlens-icon.png)  
 By: Eric Amodio](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
@@ -263,87 +334,13 @@ Integration into the editor and the explorer of various git information.  Think:
 
 ------------------------------
 
-## indent-rainbow ##
+### gi ###
 
-[![indent-rainbow ](icons/indent-rainbow.png)  
-By: oderwat](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
-
-Make your indention clearly standout.
+Git Ignore file generation
 
 ------------------------------
 
-## Markdown All in One ##
-
-[![Markdown All in One](icons/Markdown-mark.png)  
-By: Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
-
-Markdown linting and style checking along with syntax highlighting.  This also provides a live preview.
-
-------------------------------
-
-## Material Icon Theme ##
-
-[![Material Icon Theme](icons/Material-Icon-Theme.png)  
-By: Philipp Kief](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-
-Great set of icons and looks really great in dark mode.
-
-------------------------------
-
-## Python ##
-
-[![Python ](icons/python_icon.png)  
-By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit tests, and more...
-
-```JSON
-{
-  "python.autoComplete.addBrackets": true,
-  "python.linting.enabled": true,
-  "python.linting.lintOnSave": true,
-  "[python]": {
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true
-  },
-}
-```
-
-------------------------------
-
-## RECORE ##
-
-[![RECORE ](icons/recore_icon.png)  
-By: Alibaba XUX](https://marketplace.visualstudio.com/items?itemName=alixux.recore)
-
-------------------------------
-
-## Remote Workspace ##
-
-[![Remote Workspace](icons/remote-workspac_icon.png)  
-By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
-
-Adds functionality to the built-in capabilities of `vscode` regarding workspaces. Multi-protocol support (e.g., Azure, S3, FTP(s), SFTP, ...) for handling remote files like local files.
-
---------------------------------
-
-## Sort lines ##
-
-[![Sort Lines](icons/sort-lines_icon.png)  
-By: Daniel Imms](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
-
-Var sorting options.
-
---------------------------------
-
-## SVG ##
-
-[![SVG Viewer](icons/svg-viewer_icon.png)  
-By: cssho](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
-
---------------------------------
-
-## SVN ##
+### SVN ###
 
 [![Subversion ](icons/subversion.png)  
 By: Chris Johnston](https://marketplace.visualstudio.com/items?itemName=johnstoncode.svn-scm)
@@ -360,7 +357,33 @@ Integrated `subversion`.
 
 --------------------------------
 
-## Uncrustify ##
+# Utilities #
+
+---
+
+### Doxygen ###
+
+Keyword highlighting and intellisense for adding doxygen commentary.
+
+-----------------------
+
+### Sort lines ###
+
+[![Sort Lines](icons/sort-lines_icon.png)  
+By: Daniel Imms](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
+
+Var sorting options.
+
+--------------------------------
+
+### SVG ###
+
+[![SVG Viewer](icons/svg-viewer_icon.png)  
+By: cssho](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
+
+--------------------------------
+
+### Uncrustify ###
 
 [![Uncrustify ](icons/uncrustify.png)  
 By: LaurentTreguier](https://marketplace.visualstudio.com/items?itemName=LaurentTreguier.uncrustify)
@@ -395,6 +418,14 @@ Then add the following to your "WORKSPACE SETTINGS"
 > This is assuming that you are using the standard sandbox.  If not correct for the location of the downloaded `beautify` repository.
 
 Then all you need to do is right mouse on an open document and select "Format Document"... Tada! formatted document.
+
+-----
+
+
+
+
+
+
 
 ---
 [Go Home](../README.md)
