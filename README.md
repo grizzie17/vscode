@@ -15,7 +15,7 @@
 
 * [Build Setup for Local Linux](doc/VS-Code-Build-Linux.md)
 * [Build Setup for Local Windows](doc/VS-Code-Build-Windows.md)
-* [Setup for Msys](doc/VS-Code/MSYS2.md)
+* [Setup for Msys](doc/VS-Code-MSYS2.md)
 * [Remote Debugging](doc/VS-Code-Remote-Debugging.md)
 
 
