@@ -13,8 +13,93 @@ The following is a list of some favorite extensions for VSCode.
 
 Click on the squarish icon on the left-hand side of the workspace.  In the search bar bar at the top enter the name of the desired extension.  Pick the desired extension and then click on the "install" button.  Then click on the "Refresh to Load" button.  
 
+-------------------
+-------------------
 
 # Appearance #
+
+-------------------
+
+### Better Comments ###
+
+[![Better Comments](icons/better-comments_icon.png)  
+By: Aaron Bond](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+
+![sample better-comments screen-shot](icons/better-comments_example.png)
+
+
+```JSON
+{
+"better-comments.tags": [
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "note",
+      "color": "#66AA66",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "warning",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#FF6600",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "needs_work",
+      "color": "#FF6600",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "@",
+      "color": "#66CC66",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "!",
+      "color": "#66CC66",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "\\",
+      "color": "#66CC66",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "/",
+      "color": "#66CC66",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#66CC66",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    }
+  ]
+}
+```
 
 -------------------
 
@@ -50,6 +135,7 @@ Great set of icons and looks really great in dark mode.
 [![RECORE ](icons/recore_icon.png)  
 By: Alibaba XUX](https://marketplace.visualstudio.com/items?itemName=alixux.recore)
 
+-------------------
 -------------------
 
 
@@ -197,6 +283,7 @@ Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit 
 ```
 
 ------------------------------
+------------------------------
 
 # Files #
 
@@ -268,6 +355,9 @@ By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mklo
 
 Adds functionality to the built-in capabilities of `vscode` regarding workspaces. Multi-protocol support (e.g., Azure, S3, FTP(s), SFTP, ...) for handling remote files like local files.
 
+
+--------------------------------
+--------------------------------
 --------------------------------
 
 
@@ -355,6 +445,8 @@ Integrated `subversion`.
 }
 ```
 
+--------------------------------
+--------------------------------
 --------------------------------
 
 # Utilities #

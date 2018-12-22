@@ -67,6 +67,24 @@ and [VS Code Extensions](VS-Code-Extensions)
 
 You will need to configure each of these for each PC sandbox that you create (which is largely copy/paste).
 
+### Fix Bug in C/C++ extension ###
+
+On Windows edit the file `C:\Users\<yourusername>\.vscode\extensions\ms-vscode.cpptools-<versionnumber>\out\src\Debugger\attachToProcess.js`.
+
+* Find the `getRemoteOSAndProcesses` function.
+* On the first line of that function (on or around line 92) remove the double quotes around `Linux` and `Darwin`.
+* Two lines below, you should find a `'${command}'`, change the single quotes to double quotes.
+* Save the file.
+
+The resulting lines should look like:
+
+```javascript
+getRemoteOSAndProcesses(pipeCmd) {
+  const command = `sh -c 'uname && if [ $(uname) = Linux ] ; then ${nativeAttach_1.PsProcessParser.psLinuxCommand} ; elif [ $(uname) = Darwin ] ; ` +
+    `then ${nativeAttach_1.PsProcessParser.psDarwinCommand}; fi'`;
+  return common_1.execChildProcess(`${pipeCmd} "${command}"`, null, this._channel).then(output => {
+```
+
 ## Install `MSYS2` ##
 
 MSYS2 is used to create a local (PC) sandbox, and provide headers for intellisense.
@@ -137,107 +155,106 @@ Modification of the UMG cli, menu and app_dispatch commands.
 **`.vscode/launch.json`**
 ```JSON-with-comments
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // It is strongly recommended that you create a meaningful name
+      // for what you are actually debugging
+      "name": "Pipe Attach",
+      "type": "cppdbg",       // type provided by the C/C++ extension
+      "request": "attach",
+      "program": "/usr/bin/<programname>",
+      "processId": "${command:pickRemoteProcess}",
+      "pipeTransport": {
+        "debuggerPath": "/usr/bin/gdb",
+        "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "pipeArgs": [
+          "-T",
+          "admin@<your-umg-ip>",
+          "gdb"        // the 'gdb' argument on the 'UMG' is critical as it bypasses the menu
+        ],
+        "pipeCwd": "${workspaceFolder}"
+      },
+      "setupCommands": [
         {
-            // It is strongly recommended that you create a meaningful name
-            // for what you are actually debugging
-            "name": "Pipe Attach",
-            "type": "cppdbg",       // type provided by the C/C++ extension
-            "request": "attach",
-            "program": "/usr/bin/<programname>",
-            //"processId": "12345",
-            "processId": "${command:pickRemoteProcess}",
-            "pipeTransport": {
-                "debuggerPath": "/usr/bin/gdb",
-                "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
-                "pipeArgs": [
-                    "-T",
-                    "admin@<your-umg-ip>",
-                    "gdb"        // the 'gdb' argument on the 'UMG' is critical as it bypasses the menu
-                ],
-                "pipeCwd": "${workspaceFolder}"
-            },
-            "setupCommands": [
-                {
-                    "text": "handle SIGSEGV stop"
-                },
-                // specify directories for files that should be resolved
-                // please note these are relative to the build server
-                {
-                    "text": "directory /home/your-name/umg/content/c/dispatcher"
-                },
-                {
-                    "text": "directory /home/your-name/umg/content/c/menu"
-                },
-                {
-                    "text": "directory /home/your-name/umg/content/c/dispatcher"
-                },
-                {
-                    "text": "directory /home/your-name/umg/content/c/cli/source"
-                },
-                {
-                    "text": "cd /home/your-name/umg/content/c/menu"
-                },
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "set print pretty on",
-                    "ignoreFailures": true
-                }
-            ],
-            "sourceFileMap": {
-                // map the build path to your PC path.
-                "/home/your-name/umg/content/c": "${workspacePath}\\content\\c"
-            }
-            // "logging": {
-            // 	"engineLogging": true
-            // }
+          "text": "handle SIGSEGV stop"
         },
-        //=====================================================================================
+        // specify directories for files that should be resolved
+        // please note these are relative to the build server
         {
-            // It is strongly recommended that you create a meaningful name
-            // for what you are actually debugging
-            "name": "Pipe Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            //"logging": {
-            //    "engineLogging": true
-            //},
-            "program": "/usr/bin/<programname>",
-            "cwd": "/home/your-name/umg/content/c/dispatcher",
-            "targetArchitecture": "x64",
-            "MIMode": "gdb",
-            "sourceFileMap": {
-                "/home/your-name/umg/content/c": "${workspacePath}\\content\\c"
-            },
-            "setupCommands": [
-                {
-                    "text": "set print pretty on"
-                },
-                // specify directories for files that should be resolved
-                // please note these are relative to the build server
-                {
-                    "text": "directory /home/your-name/umg/content/c/dispatcher"
-                },
-                {
-                    "text": "directory /home/your-name/umg/content/c/dlog"
-                },
-                {
-                    "text": "directory /home/your-name/umg/content/c/message-bus"
-                }
-            ],
-            "pipeTransport": {
-                "pipeCwd": "${workspaceFolder}",
-                "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
-                "pipeArgs": [
-                    "-T",
-                    "admin@<your-umg-ip>",
-                    "gdb"
-                ],
-                "debuggerPath": "/usr/bin/gdb",
-            }
+          "text": "directory /home/your-name/umg/content/c/dispatcher"
+        },
+        {
+          "text": "directory /home/your-name/umg/content/c/menu"
+        },
+        {
+          "text": "directory /home/your-name/umg/content/c/dispatcher"
+        },
+        {
+          "text": "directory /home/your-name/umg/content/c/cli/source"
+        },
+        {
+          "text": "cd /home/your-name/umg/content/c/menu"
+        },
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "set print pretty on",
+          "ignoreFailures": true
         }
-    ]
+    ],
+      "sourceFileMap": {
+        // map the build path to your PC path.
+        "/home/your-name/umg/content/c": "${workspacePath}\\content\\c"
+      }
+      // "logging": {
+      // 	"engineLogging": true
+      // }
+    },
+    //=====================================================================================
+    {
+      // It is strongly recommended that you create a meaningful name
+      // for what you are actually debugging
+      "name": "Pipe Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "/usr/bin/<programname>",
+      "cwd": "/home/your-name/umg/content/c/dispatcher",
+      "targetArchitecture": "x64",
+      "MIMode": "gdb",
+      "sourceFileMap": {
+        "/home/your-name/umg/content/c": "${workspacePath}\\content\\c"
+      },
+      "setupCommands": [
+        {
+          "text": "set print pretty on"
+        },
+        // specify directories for files that should be resolved
+        // please note these are relative to the build server
+        {
+          "text": "directory /home/your-name/umg/content/c/dispatcher"
+        },
+        {
+          "text": "directory /home/your-name/umg/content/c/dlog"
+        },
+        {
+          "text": "directory /home/your-name/umg/content/c/message-bus"
+        }
+      ],
+      "pipeTransport": {
+        "pipeCwd": "${workspaceFolder}",
+        "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
+        "pipeArgs": [
+          "-T",
+          "admin@<your-umg-ip>",
+          "gdb"
+        ],
+        "debuggerPath": "/usr/bin/gdb",
+      }
+      //"logging": {
+      //    "engineLogging": true
+      //}
+    }
+  ]
 }
 ```
 
