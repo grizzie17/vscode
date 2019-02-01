@@ -5,8 +5,7 @@
 
 # Remote Debugging #
 
-We are talking generally about remote debugging and also specifically
-about debugging on the *UMG*.  Our initial focus will be on C/C++
+We are talking generally about remote debugging.  Our initial focus will be on C/C++
 debugging but these basic techniques should work with any language that
 **`gdb`** supports.
 
@@ -34,18 +33,20 @@ debugging but these basic techniques should work with any language that
 
 > The details of each will follow in their own section
 
-* Install and configure [Visual Studio Code](#visual-studio-code) (vscode)
-  * install and configure `vscode C/C++` extension
-  * install and configure `vscode ftp-sync` extension
-* Install and configure [MSYS2](VS-Code-MSYS2)
-* Enable native Windows `ssh` support
-* create a local (on your PC) sandbox
-* create a sandbox on the build server
-  * make sure that you can ssh from your PC to the build server without entering password
-  * connect the two using vscode's `ftp-sync` extension
-* configure your build server sandbox to build debug using `bbdebug yes`
-* configure your `launch.json` file for remote debugging
-* let the debugging begin
+- [Remote Debugging](#remote-debugging)
+  - [What we can/can't do](#what-we-cancant-do)
+    - [CAN](#can)
+    - [CAN'T](#cant)
+  - [What you need to get started](#what-you-need-to-get-started)
+  - [Visual Studio Code](#visual-studio-code)
+    - [Install needed extensions](#install-needed-extensions)
+    - [Fix Bug in C/C++ extension](#fix-bug-in-cc-extension)
+  - [Install `MSYS2`](#install-msys2)
+  - [Create local (PC) sandbox](#create-local-pc-sandbox)
+    - [Configure `C/C++` and `ftp-sync` extensions](#configure-cc-and-ftp-sync-extensions)
+  - [Create sandbox on the build server](#create-sandbox-on-the-build-server)
+  - [Building for Debug](#building-for-debug)
+  - [Debugging Workflow](#debugging-workflow)
 
 ## Visual Studio Code ##
 
@@ -101,7 +102,7 @@ cd /c/Users/yourname/Documents
 
 mkdir yoursandbox
 cd yoursandbox
-svn checkout https://dcssvncol.int.vertivco.com/svn/DCIMA/trunk content
+git clone https://github.com/group/your-repo content
 ./content/pull.sh
 ```
 
@@ -131,7 +132,7 @@ Use ssh to connect to the build server.  If you cannot do this without using a p
 ```sh
 mkdir yoursandbox
 cd yoursandbox
-svn checkout https://dcssvncol.int.vertivco.com/svn/DCIMA/trunk content
+git clone https://github.com/group/your-repo content
 ./content/pull.sh
 ```
 
@@ -145,9 +146,6 @@ bbdebug yes
 ```
 Then build your sandbox accordingly.
 
-When **debug** is enabled there is more happening than just passing flags 
-to the compiler.  There are special tools and files that will be delivered and installed to the target device.
-Modification of the UMG cli, menu and app_dispatch commands.
 
 ## Debugging Workflow ##
 
@@ -170,8 +168,7 @@ Modification of the UMG cli, menu and app_dispatch commands.
         "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
         "pipeArgs": [
           "-T",
-          "admin@<your-umg-ip>",
-          "gdb"        // the 'gdb' argument on the 'UMG' is critical as it bypasses the menu
+          "admin@<your-device-ip>"
         ],
         "pipeCwd": "${workspaceFolder}"
       },
@@ -182,19 +179,19 @@ Modification of the UMG cli, menu and app_dispatch commands.
         // specify directories for files that should be resolved
         // please note these are relative to the build server
         {
-          "text": "directory /home/your-name/umg/content/c/dispatcher"
+          "text": "directory /home/your-name/sandbox/content/c/dispatcher"
         },
         {
-          "text": "directory /home/your-name/umg/content/c/menu"
+          "text": "directory /home/your-name/sandbox/content/c/menu"
         },
         {
-          "text": "directory /home/your-name/umg/content/c/dispatcher"
+          "text": "directory /home/your-name/sandbox/content/c/dispatcher"
         },
         {
-          "text": "directory /home/your-name/umg/content/c/cli/source"
+          "text": "directory /home/your-name/sandbox/content/c/cli/source"
         },
         {
-          "text": "cd /home/your-name/umg/content/c/menu"
+          "text": "cd /home/your-name/sandbox/content/c/menu"
         },
         {
           "description": "Enable pretty-printing for gdb",
@@ -204,7 +201,7 @@ Modification of the UMG cli, menu and app_dispatch commands.
     ],
       "sourceFileMap": {
         // map the build path to your PC path.
-        "/home/your-name/umg/content/c": "${workspacePath}\\content\\c"
+        "/home/your-name/sandbox/content/c": "${workspacePath}\\content\\c"
       }
       // "logging": {
       // 	"engineLogging": true
@@ -218,11 +215,11 @@ Modification of the UMG cli, menu and app_dispatch commands.
       "type": "cppdbg",
       "request": "launch",
       "program": "/usr/bin/<programname>",
-      "cwd": "/home/your-name/umg/content/c/dispatcher",
+      "cwd": "/home/your-name/sandbox/content/c/dispatcher",
       "targetArchitecture": "x64",
       "MIMode": "gdb",
       "sourceFileMap": {
-        "/home/your-name/umg/content/c": "${workspacePath}\\content\\c"
+        "/home/your-name/sandbox/content/c": "${workspacePath}\\content\\c"
       },
       "setupCommands": [
         {
@@ -231,13 +228,13 @@ Modification of the UMG cli, menu and app_dispatch commands.
         // specify directories for files that should be resolved
         // please note these are relative to the build server
         {
-          "text": "directory /home/your-name/umg/content/c/dispatcher"
+          "text": "directory /home/your-name/sandbox/content/c/dispatcher"
         },
         {
-          "text": "directory /home/your-name/umg/content/c/dlog"
+          "text": "directory /home/your-name/sandbox/content/c/dlog"
         },
         {
-          "text": "directory /home/your-name/umg/content/c/message-bus"
+          "text": "directory /home/your-name/sandbox/content/c/message-bus"
         }
       ],
       "pipeTransport": {
@@ -245,7 +242,7 @@ Modification of the UMG cli, menu and app_dispatch commands.
         "pipeProgram": "C:\\Windows\\System32\\OpenSSH\\ssh.exe",
         "pipeArgs": [
           "-T",
-          "admin@<your-umg-ip>",
+          "admin@<your-device-ip>",
           "gdb"
         ],
         "debuggerPath": "/usr/bin/gdb",
@@ -258,7 +255,7 @@ Modification of the UMG cli, menu and app_dispatch commands.
 }
 ```
 
-Need to login to UMG **`admin`** account without using password (in other words using the .ssh/id_rsa key).
+Need to login to the device **`admin`** account without using password (in other words using the .ssh/id_rsa key).
 
 
 ---

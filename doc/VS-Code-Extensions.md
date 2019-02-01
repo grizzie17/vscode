@@ -226,7 +226,7 @@ From within your sandbox in `vscode`, press the "F1" key and enter "C/CPP" and s
 }
 ```
 
-The previous is an example that can be used.  An even better example includes the header files from the product (such as UMG, Firebird, or whatever).
+The previous is an example that can be used.  An even better example includes the header files from the product being worked.
 
 #### Configuring launch.json for debugging ####
 
@@ -375,9 +375,9 @@ View the issues assigned to you
 ```JSON
 {
   "github.repositories": [
-    "renaissance-code/firebird"
+    "group/repo"
   ],
-  "github.host": "ghe.int.vertivco.com",
+  "github.host": "github.com",
   "github.username": "your-user-name"
 }
 ```

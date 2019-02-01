@@ -21,10 +21,9 @@ Now add the following into either your "USER SETTINGS" or your "WORKSPACE SETTIN
 Then add the following to your "WORKSPACE SETTINGS"
 
 ```JSON
-"uncrustify.configPath": "refs/beautify/conf/uncrustify.cfg"
+"uncrustify.configPath": "uncrustify.cfg"
 ```
 
-> This is assuming that you are using the standard sandbox.  If not correct for the location of the downloaded `beautify` repository.
 
 Then all you need to do is right mouse on an open document and select "Format Document"... Tada! formatted document.
 

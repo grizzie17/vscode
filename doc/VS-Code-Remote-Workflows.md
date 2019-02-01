@@ -19,7 +19,7 @@ Open MSYS2 and `cd /c/Users/your-name/Documents/your-sandbox`
 
 ```sh
 cd /c/Users/your-name/Documents/your-sandbox
-git clone https://ghe.int.vertivco.com/renaissance-code/firebird content
+git clone https://github.com/group/repository.git content
 ./content/pull.sh
 ```
 
@@ -36,13 +36,13 @@ Please see the [`ftp-sync`](VS-Code-Extensions#ftp-sync) sub-section on the Exte
 
 If you would prefer having all of your files on the remote server you can use the `Remote Workspace` extension.  This extension adds a set of protocols to vs-code's built-in "workspace".
 
-So, as an example you create a sandbox on `hsv-tor3`, your workspace settings might look something like:
+So, as an example you create a sandbox on `bobs-server`, your workspace settings might look something like:
 
 ```json
 {
     "folders": [
         {
-            "uri": "sftp://your-name@hsv-tor3.int.vertivco.com/home/your-name/your-sandbox?key=id_rsa.ppk"
+            "uri": "sftp://your-name@bobs-server/home/your-name/your-sandbox?key=id_rsa.ppk"
         }
     ]
 }
