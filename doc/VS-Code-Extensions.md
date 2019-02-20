@@ -13,12 +13,11 @@ The following is a list of some favorite extensions for VSCode.
 
 Click on the squarish icon on the left-hand side of the workspace.  In the search bar bar at the top enter the name of the desired extension.  Pick the desired extension and then click on the "install" button.  Then click on the "Refresh to Load" button.  
 
--------------------
--------------------
+
+---
 
 # Appearance #
 
--------------------
 
 ### Better Comments ###
 
@@ -27,10 +26,13 @@ By: Aaron Bond](https://marketplace.visualstudio.com/items?itemName=aaron-bond.b
 
 ![sample better-comments screen-shot](icons/better-comments_example.png)
 
+#### Configure `Better Comments` extension ####
+
+For a slightly different configuration from the default that matches well with C++ and other development that includes the use of `Doxygen` comments, `issue` numbers, `TODO` commentary and others use the following.
 
 ```JSON
 {
-"better-comments.tags": [
+  "better-comments.tags": [
     {
       "tag": "?",
       "color": "#3498DB",
@@ -121,26 +123,23 @@ Make your indention clearly standout.
 
 -------------------
 
-### Material Icon Theme ###
+### vscode icons ###
 
-[![Material Icon Theme](icons/Material-Icon-Theme.png)  
-By: Philipp Kief](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-
-Great set of icons and looks really great in dark mode.
-
--------------------
-
-### RECORE ###
-
-[![RECORE ](icons/recore_icon.png)  
-By: Alibaba XUX](https://marketplace.visualstudio.com/items?itemName=alixux.recore)
-
--------------------
--------------------
+[![vscode icons](icons/vscode-icons_icon.png)  
+By: Reberto Huertas](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
 
 
+
+---
 
 # Development #
+
+
+
+### Auto Close Tag ###
+
+[![auto close tag](icons/auto-close-tag_icon.png)  
+By: Jun Han](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 
 -------------------
 
@@ -155,7 +154,7 @@ Syntax highlighting for autoconf, M4, and automake files (autotools)
 
 ### bitbakers-dozen ###
 
-[![bitbakers-dozen ](icons/bitbakers-dozen.png)  
+[![bitbakers dozen](icons/bitbakers-dozen.png)  
 By: Bernard Bergan](https://marketplace.visualstudio.com/items?itemName=bbergan.bitbakers-dozen)
 
 Syntax highlighting for bitbake recipes and configuration files.
@@ -232,25 +231,6 @@ The previous is an example that can be used.  An even better example includes th
 
 For help configuring the debugger see [Configuring launch.json for C/C++ debugging](https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md)
 
------------------------
-
-### C/C++ Advanced Lint ###
-
-[![C/C++ Advanced Lint](icons/C-Cpp-FlyLint_icon.png)  
-By: Joseph Benden](https://marketplace.visualstudio.com/items?itemName=jbenden.c-cpp-flylint)
-
-This extension can be used to accomplish the same as `cppcheck` on the Linux side.  For that matter this extension can use several different checkers/linters including `cppcheck`.
-
-```JSON
-{
-    "c-cpp-flylint.cppcheck.enable": true,
-    "c-cpp-flylint.cppcheck.executable": "C:/path/to/cppcheck.exe",
-    "c-cpp-flylint.cppcheck.includePaths": [
-        "list of include paths (usually from msys64)"
-    ],
-    "c-cpp-flylint.run": "onType"
-}
-```
 
 -----------------------
 
@@ -260,6 +240,42 @@ This extension can be used to accomplish the same as `cppcheck` on the Linux sid
 By: Yu Zhang](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
 Markdown linting and style checking along with syntax highlighting.  This also provides a live preview.
+
+------------------------------
+
+### PHP Debug ###
+
+[![PHP Debug](icons/php-debug_icon.png)  
+By: Felix Becker](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
+
+> Add description for setting up php-debug in VS-Code.
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": 
+  [
+    {
+      "label": "localhost:8000/current-file",
+      "type": "shell",
+      "command": "explorer",
+      "args": [
+        "http://localhost:8000/${relativeFile}"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "localhost:8000",
+      "type": "shell",
+      "command": "explorer",
+      "args": [
+        "http://localhost:8000"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
+```
 
 ------------------------------
 
@@ -278,16 +294,23 @@ Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit 
   "[python]": {
     "editor.tabSize": 4,
     "editor.insertSpaces": true
-  },
+  }
 }
 ```
 
 ------------------------------
-------------------------------
+
+### TSLint ###
+
+[![typescript tslint](icons/tslint_icon.png)  
+By: Microsoft](ms-vscode.vscode-typescript-tslint-plugin)
+
+Linting for Typescript files.
+
+---
 
 # Files #
 
----
 
 ### EditorConfig for VS Code ###
 
@@ -305,46 +328,6 @@ This extension is used to process the `.editorconfig` files and apply the contai
 
 For more information on `.editorconfig` files see [EditorConfig site](https://editorconfig.org/)
 
-------------------------------
-
-### ftp-sync ###
-
-[![ftp-sync ](icons/ftp-sync_icon.png)  
-By: Lukasz Wronski](https://marketplace.visualstudio.com/items?itemName=lukasz-wronski.ftp-sync)
-
-
-Open `vscode` in your new sandbox.
-Press the `F1` key and enter "ftp-sync" and select the "ftp-sync: Init" command.
-
-**`.vscode/ftp-sync.json`**
-```JSON
-{
-    "remotePath": "<your-sandbox-on-build-server>",
-    "host": "<build-server-name>",
-    "username": "<your-username-on-build-server>",
-    "port": 22,
-    "secure": true,
-    "protocol": "sftp",
-    "uploadOnSave": true,
-    "passive": false,
-    "debug": false,
-    "privateKeyPath": "<path-to-id_rsa-on-pc>",
-    "passphrase": null,
-    "ignore": [
-        "\\.vscode",
-        "\\.git",
-        "\\.svn",
-        "\\.DS_Store",
-        "build.bat",
-        "[A-Za-z0-9._-]*.code-workspace"
-    ],
-    "generatedFiles": {
-        "uploadOnSave": false,
-        "extensionsToInclude": [],
-        "path": ""
-    }
-}
-```
 
 ------------------------------
 
@@ -356,16 +339,52 @@ By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mklo
 Adds functionality to the built-in capabilities of `vscode` regarding workspaces. Multi-protocol support (e.g., Azure, S3, FTP(s), SFTP, ...) for handling remote files like local files.
 
 
---------------------------------
---------------------------------
---------------------------------
+------------------------------
+
+### sftp ###
+
+[![sftp ](icons/sftp-icon.png)  
+By: liximomo](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp)
+
+#### Configure `sftp` extension ####
+
+Open `vscode` in your new sandbox.
+Press the `F1` key and enter "sftp" and select the "SFTP: Config" command.
+
+**`.vscode/sftp.json`**
 
 
-# Repositories #
+```json
+{
+  "name": "Descriptive Name",
+  "host": "your-host-site.com",
+  "remotePath": "/http",
+  "protocol": "ftp",
+  "port": 21,
+  "username": "your-username",
+  "password": "your-password",
+  "uploadOnSave": false,
+  "ignore": [
+    ".vscode",
+    ".git",
+    ".gitignore",
+    ".DS_Store",
+    ".editorconfig",
+    ".user.ini",
+    "Thumbs.db",
+    "phpinfo.php"
+  ]
+}
+```
+
+
 
 ---
 
-### GitHub Issues and PRs ###
+# Repositories #
+
+
+### GitHub Issues ###
 
 [![GitHub Issues and PRs](icons/github-issues_icon.png)  
 By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.github-issues-prs)
@@ -418,7 +437,7 @@ Integration into the editor and the explorer of various git information.  Think:
   },
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
-  "gitlens.defaultDateStyle": "absolute",
+  "gitlens.defaultDateStyle": "absolute"
 }
 ```
 
@@ -445,13 +464,11 @@ Integrated `subversion`.
 }
 ```
 
---------------------------------
---------------------------------
---------------------------------
+
+---
 
 # Utilities #
 
----
 
 ### Doxygen ###
 
@@ -473,6 +490,8 @@ Var sorting options.
 [![SVG Viewer](icons/svg-viewer_icon.png)  
 By: cssho](https://marketplace.visualstudio.com/items?itemName=cssho.vscode-svgviewer)
 
+Support for Scaled Vector Graphic files/data.
+
 --------------------------------
 
 ### Uncrustify ###
@@ -492,7 +511,7 @@ Now add the following into either your "USER SETTINGS" or your "WORKSPACE SETTIN
 
 ```JSON-with-comments
 {
-  // disable the default formatting provided by the C/CPP extension
+  // disable default formatting by the C/CPP extension
   "C_CPP.formatting": "Disabled",
   // identify the correct location of the executable
   "uncrustify.executablePath": "C:\\uncrustify\\uncrustify.exe"
@@ -503,24 +522,13 @@ Then add the following to your "WORKSPACE SETTINGS"
 
 ```JSON
 {
-  "uncrustify.configPath": "refs/beautify/conf/uncrustify.cfg"
+  "uncrustify.configPath": "path/to/uncrustify.cfg"
 }
 ```
-
-> This is assuming that you are using the standard sandbox.  If not correct for the location of the downloaded `beautify` repository.
 
 Then all you need to do is right mouse on an open document and select "Format Document"... Tada! formatted document.
 
 -----
-
-
-
-
-
-
-
 ---
 [Go Home](../README.md)
-
-
 
