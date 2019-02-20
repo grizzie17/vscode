@@ -179,19 +179,13 @@ Then build your sandbox accordingly.
         // specify directories for files that should be resolved
         // please note these are relative to the build server
         {
-          "text": "directory /home/your-name/sandbox/content/c/dispatcher"
+          "text": "directory /home/your-name/sandbox/source1"
         },
         {
-          "text": "directory /home/your-name/sandbox/content/c/menu"
+          "text": "directory /home/your-name/sandbox/source2"
         },
         {
-          "text": "directory /home/your-name/sandbox/content/c/dispatcher"
-        },
-        {
-          "text": "directory /home/your-name/sandbox/content/c/cli/source"
-        },
-        {
-          "text": "cd /home/your-name/sandbox/content/c/menu"
+          "text": "directory /home/your-name/sandbox/source3"
         },
         {
           "description": "Enable pretty-printing for gdb",
@@ -201,7 +195,7 @@ Then build your sandbox accordingly.
     ],
       "sourceFileMap": {
         // map the build path to your PC path.
-        "/home/your-name/sandbox/content/c": "${workspacePath}\\content\\c"
+        "/home/your-name/sandbox": "${workspacePath}"
       }
       // "logging": {
       // 	"engineLogging": true
@@ -215,11 +209,11 @@ Then build your sandbox accordingly.
       "type": "cppdbg",
       "request": "launch",
       "program": "/usr/bin/<programname>",
-      "cwd": "/home/your-name/sandbox/content/c/dispatcher",
+      "cwd": "/home/your-name/sandbox",
       "targetArchitecture": "x64",
       "MIMode": "gdb",
       "sourceFileMap": {
-        "/home/your-name/sandbox/content/c": "${workspacePath}\\content\\c"
+        "/home/your-name/sandbox": "${workspacePath}"
       },
       "setupCommands": [
         {
@@ -228,13 +222,13 @@ Then build your sandbox accordingly.
         // specify directories for files that should be resolved
         // please note these are relative to the build server
         {
-          "text": "directory /home/your-name/sandbox/content/c/dispatcher"
+          "text": "directory /home/your-name/sandbox/source1"
         },
         {
-          "text": "directory /home/your-name/sandbox/content/c/dlog"
+          "text": "directory /home/your-name/sandbox/source2"
         },
         {
-          "text": "directory /home/your-name/sandbox/content/c/message-bus"
+          "text": "directory /home/your-name/sandbox/source3"
         }
       ],
       "pipeTransport": {

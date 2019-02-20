@@ -29,7 +29,7 @@ Do a similar operation on the build-server to setup a remote sandbox.  We will b
 
 ### Configure `ftp-sync` ###
 
-Please see the [`ftp-sync`](VS-Code-Extensions#ftp-sync) sub-section on the Extensions page.
+Please see the [`sftp`](VS-Code-Extensions#sftp) sub-section on the Extensions page.
 
 
 ## Remote Workspace ##
