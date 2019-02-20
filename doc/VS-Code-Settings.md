@@ -19,7 +19,7 @@ I like a dark theme, but good contrast (for older eyes).
   "workbench.colorTheme": "Visual Studio Dark",
   // This is a very clean icon-theme which is great in dark-mode
   // There are plenty more for you to try if you wish.
-  "workbench.iconTheme": "recore-icons",
+  "workbench.iconTheme": "vscode-icons",
   // This will change the title-bar of the workspace to also be dark.
   //  The menus also move into the title bar.
   "window.titleBarStyle": "custom",
@@ -115,6 +115,8 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 {
   // very handy: even lets you traverse through functions and the like
   "breadcrumbs.enabled": true,
+  "breadcrumbs.symbolSortOrder": "name",
+
   "files.exclude": {
     // don't process this "Windows" specific file
     "desktop.ini": true
@@ -122,14 +124,6 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 }
 ```
 
-### Icons ###
-
-**File -> Preferences -> File Icon Theme**
-
-`Recore`
-
-`Recore` is actually an extension that supports the `Visix` language, but they include a **really** nice set of icons
-that look great in the dark theme.  And they include a wide variety of icons that are specialized for different folders.
 
 ---
 
