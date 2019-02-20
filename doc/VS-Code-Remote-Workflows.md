@@ -6,9 +6,9 @@
 
 Any time you are editing Linux files using VS-Code for Windows you are going to need use some sort of remote workflow.
 
-## ftp-sync ##
+## sftp ##
 
-This workflow creates a local sandbox on Windows that basically mirrors a specific sandbox on the remote. Then uses the `ftp-sync` extension to sync between the two.  You can easily setup `ftp-sync` to automatically sync when you save a file, or sync bulk directories.  `ftp-sync` works best when your local sandbox is setup as a "directory" to VS-Code.
+This workflow creates a local sandbox on Windows that basically mirrors a specific sandbox on the remote. Then uses the `sftp` extension to sync between the two.  You can easily setup `sftp` to automatically sync when you save a file, or sync bulk directories.  `sftp` works best when your local sandbox is setup as a "directory" to VS-Code.
 
 ### Creating your PC-Local sandbox ###
 
@@ -27,9 +27,9 @@ git clone https://github.com/group/repository.git content
 
 Do a similar operation on the build-server to setup a remote sandbox.  We will be hooking these two sandboxes shortly.
 
-### Configure `ftp-sync` ###
+### Configure `sftp` ###
 
-Please see the [`sftp`](VS-Code-Extensions#sftp) sub-section on the Extensions page.
+Please see the [`sftp`](VS-Code-Extensions.md#sftp) sub-section on the Extensions page.
 
 
 ## Remote Workspace ##
