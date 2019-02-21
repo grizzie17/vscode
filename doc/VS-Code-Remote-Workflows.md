@@ -12,7 +12,7 @@ This workflow creates a local sandbox on Windows that basically mirrors a specif
 
 ### Creating your PC-Local sandbox ###
 
-> This workflow assumes that you have [MSYS2](VS-Code-MSYS2) installed on your PC.
+> This workflow assumes that you have [MSYS2](VS-Code-MSYS2.md) installed on your PC.
 
 Create a new folder (most likely in your Documents folder).
 Open MSYS2 and `cd /c/Users/your-name/Documents/your-sandbox`

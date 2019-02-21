@@ -50,21 +50,24 @@ debugging but these basic techniques should work with any language that
 
 ## Visual Studio Code ##
 
-To install Visual Studio Code on your PC simply visit the [website](https://code.visualstudio.com) and select the "Download for Windows" button on the homepage.  For a better description please see [Getting Started](VS-Code#getting-started).
+To install Visual Studio Code on your PC simply visit the 
+[website](https://code.visualstudio.com) and select the 
+"Download for Windows" button on the homepage.  For a better 
+description please see [Getting Started](VS-Code.md#getting-started).
 
 When you run `vscode` for the first time take a few minutes to setup your favorite 
-color themes and the like.  For more info, please see [VS Code Settings](VS-Code-Settings) 
-and [VS Code Extensions](VS-Code-Extensions)
+color themes and the like.  For more info, please see [VS Code Settings](VS-Code-Settings.md) 
+and [VS Code Extensions](VS-Code-Extensions.md)
 
 ### Install needed extensions ###
 
 * The `C/C++` extension provides the interfaces for the debugger.  In addition it is used to 
   help resolve headers and thus variables so things like intellisense work.  
-  For installation instructions please see the [Install C/C++ extension](VS-Code-Extensions#install-cc-extension) 
-  subsection on the [Extensions](VS-Code-Extensions) page.
-* The `ftp-sync` extension is used to transfer files to the build-server that have been edited on your PC.
-  For installation instructions please see the [Install ftp-sync extension](VS-Code-Extensions#install-ftp-sync-extension)
-  subsection on the [Extensions](VS-Code-Extensions) page.
+  For installation instructions please see the [Install C/C++ extension](VS-Code-Extensions.md#install-cc-extension) 
+  subsection on the [Extensions](VS-Code-Extensions.md) page.
+* The `sftp` extension is used to transfer files to the build-server that have been edited on your PC.
+  For installation instructions please see the [Install sftp extension](VS-Code-Extensions.md#install-sftp-extension)
+  subsection on the [Extensions](VS-Code-Extensions.md) page.
 
 You will need to configure each of these for each PC sandbox that you create (which is largely copy/paste).
 
@@ -90,7 +93,7 @@ getRemoteOSAndProcesses(pipeCmd) {
 
 MSYS2 is used to create a local (PC) sandbox, and provide headers for intellisense.
 
-Please see the [MSYS2](VS-Code-MSYS2) page.
+Please see the [MSYS2](VS-Code-MSYS2.md) page.
 
 ## Create local (PC) sandbox ##
 
@@ -115,9 +118,9 @@ ln -s $PWD ~/yoursandbox
 
 ### Configure `C/C++` and `ftp-sync` extensions ###
 
-Please see [Configure C/C++ extension](VS-Code-Extensions#cc) subsection on the Extensions page.
+Please see [Configure C/C++ extension](VS-Code-Extensions.md#cc) subsection on the Extensions page.
 
-Please see [Configure ftp-sync extension](VS-Code-Extensions#ftp-sync) subsection on the Extensions page.
+Please see [Configure ftp-sync extension](VS-Code-Extensions.md#ftp-sync) subsection on the Extensions page.
 
 
 

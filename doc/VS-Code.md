@@ -32,4 +32,4 @@ Then you may want to visit the [Documents](https://code.visualstudio.com/docs) p
 
 ## Next ##
 
-Visit our [Settings](VS-Code-Settings) page and our [Extensions](VS-Code-Extensions) page
+Visit our [Settings](VS-Code-Settings.md) page and our [Extensions](VS-Code-Extensions.md) page
