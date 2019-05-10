@@ -481,7 +481,15 @@ Keyword highlighting and intellisense for adding doxygen commentary.
 [![Sort Lines](icons/sort-lines_icon.png)  
 By: Daniel Imms](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
 
-Var sorting options.
+Various sorting options.
+
+--------------------------------
+
+### Sort Lines by Selection ###
+
+Sort Lines by Selection  
+By: earshinov
+
 
 --------------------------------
 
