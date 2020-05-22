@@ -135,6 +135,10 @@ By: Reberto Huertas](https://marketplace.visualstudio.com/items?itemName=roberto
 # Development #
 
 
+### Arduino ###
+
+------------------
+
 
 ### Auto Close Tag ###
 
@@ -234,6 +238,21 @@ For help configuring the debugger see [Configuring launch.json for C/C++ debuggi
 
 -----------------------
 
+### CMake ###
+
+[![CMake ](icons/CMake_icon.png)  
+By: twxs](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
+
+-----------------------
+
+### Code Spell Checker ###
+
+-----------------------
+
+### Insert GUID ###
+
+-----------------------
+
 ### Markdown All in One ###
 
 [![Markdown All in One](icons/Markdown-mark.png)  
@@ -300,6 +319,12 @@ Linting, Debugging (multi-threaded, remote), code formatting, refactoring, unit 
 
 ------------------------------
 
+### Sort Lines by Selection ###
+[![Sort Lines by Selection](icons/sort-lines-by-selection_icon.png)  
+By: earshinov](https://marketplace.visualstudio.com/items?itemName=earshinov.sort-lines-by-selection)
+
+------------------------------
+
 ### TSLint ###
 
 [![typescript tslint](icons/tslint_icon.png)  
@@ -331,7 +356,19 @@ For more information on `.editorconfig` files see [EditorConfig site](https://ed
 
 ------------------------------
 
-### Remote Workspace ###
+### Remote Development ###
+[![Remote Development](icons/RemoteDevelopment_icon.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+
+Extension Pack that adds the `Remote Development` tools for VS-Code.  These include:
+
+* Remote - SSH
+* Remote - WSL
+* Remote - Containers (Docker)
+
+------------------------------
+
+### Remote Workspace (suggest Remote Development instead) ###
 
 [![Remote Workspace](icons/remote-workspac_icon.png)  
 By: Marcel J. Kloubert](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
@@ -486,9 +523,8 @@ Various sorting options.
 --------------------------------
 
 ### Sort Lines by Selection ###
-
-Sort Lines by Selection  
-By: earshinov
+[![Sort Lines by Selection](icons/sort-lines-by-selection_icon.png)  
+By: earshinov](https://marketplace.visualstudio.com/items?itemName=earshinov.sort-lines-by-selection)
 
 
 --------------------------------
@@ -517,7 +553,7 @@ Then install the `Uncrustify` extension into vscode.
 
 Now add the following into either your "USER SETTINGS" or your "WORKSPACE SETTINGS".
 
-```JSON-with-comments
+```JSONC
 {
   // disable default formatting by the C/CPP extension
   "C_CPP.formatting": "Disabled",
@@ -539,4 +575,3 @@ Then all you need to do is right mouse on an open document and select "Format Do
 -----
 ---
 [Go Home](../README.md)
-

@@ -13,7 +13,7 @@ Settings for editors are very personal.  But hopefully, these settings may inspi
 I like a dark theme, but good contrast (for older eyes).
 
 **User Settings**
-```JSON-with-comments
+```JSONC
 {
   // built-in color-theme (just select File->Preferences->Color Theme)
   "workbench.colorTheme": "Visual Studio Dark",
@@ -29,7 +29,7 @@ I like a dark theme, but good contrast (for older eyes).
 ## Fonts, Linespacing, Whitespace ##
 
 **User Settings**
-```JSON-with-comments
+```JSONC
 {
   "editor.fontSize": 18,               // I like a larger font
   "editor.fontWeight": "500",          // with slightly more thickness
@@ -81,7 +81,7 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 ## Language Specific Settings ##
 
 **User Settings**
-```JSON-with-comments
+```JSONC
 {
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
@@ -93,7 +93,7 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "files.trimTrailingWhitespace": false
-  }
+  },
   "[php]": {
     // default word-separators minus '$'
     // allow the '$' to be included when you double-click a php variable
@@ -111,7 +111,7 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 
 ## Files and Such ##
 
-```JSON-with-comments
+```JSONC
 {
   // very handy: even lets you traverse through functions and the like
   "breadcrumbs.enabled": true,
@@ -128,4 +128,3 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 ---
 
 [Go Home](../README.md)
-

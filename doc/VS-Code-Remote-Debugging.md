@@ -154,7 +154,7 @@ Then build your sandbox accordingly.
 
 
 **`.vscode/launch.json`**
-```JSON-with-comments
+```JSONC
 {
   "version": "0.2.0",
   "configurations": [
@@ -258,5 +258,3 @@ Need to login to the device **`admin`** account without using password (in other
 ---
 
 [Go Home](../README.md)
-
-
