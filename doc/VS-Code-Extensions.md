@@ -137,6 +137,10 @@ By: Reberto Huertas](https://marketplace.visualstudio.com/items?itemName=roberto
 
 ### Arduino ###
 
+[![Arduino ](icons/arduino.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino)
+
+
 ------------------
 
 
@@ -414,6 +418,14 @@ Press the `F1` key and enter "sftp" and select the "SFTP: Config" command.
 }
 ```
 
+---------------------------
+
+### vscode-pdf ###
+
+[![sftp ](icons/vscode-pdf.png)   
+By: tomoki1207](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)
+
+View PDF files in your workspace.
 
 
 ---

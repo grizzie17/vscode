@@ -6,7 +6,7 @@
 
 ## Settings ##
 
-```JSON
+```JSONC
 {
   "terminal.integrated.shell.windows": "C:\\msys64\\usr\\bin\\bash.exe",
 	"terminal.integrated.shellArgs.windows":[ "--login", "-i" ],
@@ -22,7 +22,7 @@
 ## Configure C/C++ Extension ##
 
 
-```JSON
+```JSONC
 {
   "configurations": [
     {

@@ -13,7 +13,7 @@ Settings for editors are very personal.  But hopefully, these settings may inspi
 I like a dark theme, but good contrast (for older eyes).
 
 **User Settings**
-```JSONC
+```jsonc
 {
   // built-in color-theme (just select File->Preferences->Color Theme)
   "workbench.colorTheme": "Visual Studio Dark",
@@ -29,7 +29,7 @@ I like a dark theme, but good contrast (for older eyes).
 ## Fonts, Linespacing, Whitespace ##
 
 **User Settings**
-```JSONC
+```jsonc
 {
   "editor.fontSize": 18,               // I like a larger font
   "editor.fontWeight": "500",          // with slightly more thickness
@@ -49,7 +49,7 @@ For a really great programmer's font download
 [FiraCode](https://github.com/tonsky/FiraCode) and install it.
 Then add the following to your **User Settings**
 
-```JSON
+```jsonc
 {
   "editor.fontLigatures": true,
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
@@ -81,7 +81,7 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 ## Language Specific Settings ##
 
 **User Settings**
-```JSONC
+```jsonc
 {
   "editor.tabSize": 4,
   "editor.insertSpaces": true,
@@ -111,7 +111,7 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
 
 ## Files and Such ##
 
-```JSONC
+```jsonc
 {
   // very handy: even lets you traverse through functions and the like
   "breadcrumbs.enabled": true,
