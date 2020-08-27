@@ -247,6 +247,17 @@ For help configuring the debugger see [Configuring launch.json for C/C++ debuggi
 [![CMake ](icons/CMake_icon.png)  
 By: twxs](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
 
+Provides linting and intellisense for CMake configuration files.
+
+-----------------------
+
+### CMake Tools ###
+
+[![CMake Tools](icons/cmake-tools-logo.png)  
+By: Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
+
+Provides an integrated experience for `CMake` development in vs-code.
+
 -----------------------
 
 ### Code Spell Checker ###
@@ -525,14 +536,6 @@ Keyword highlighting and intellisense for adding doxygen commentary.
 
 -----------------------
 
-### Sort lines ###
-
-[![Sort Lines](icons/sort-lines_icon.png)  
-By: Daniel Imms](https://marketplace.visualstudio.com/items?itemName=Tyriar.sort-lines)
-
-Various sorting options.
-
---------------------------------
 
 ### Sort Lines by Selection ###
 [![Sort Lines by Selection](icons/sort-lines-by-selection_icon.png)  
