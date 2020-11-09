@@ -64,6 +64,12 @@ For a slightly different configuration from the default that matches well with C
       "backgroundColor": "transparent"
     },
     {
+        "tag": "#",
+        "color": "#339999",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+    },
+    {
       "tag": "@",
       "color": "#66CC66",
       "strikethrough": false,
@@ -235,6 +241,19 @@ From within your sandbox in `vscode`, press the "F1" key and enter "C/CPP" and s
 
 The previous is an example that can be used.  An even better example includes the header files from the product being worked.
 
+Add the following to your `vscode-workspace` file or add it to the `User` settings:
+
+```JSONC
+{
+  "settings":{
+    // C++
+    "C_Cpp.clang_format_path": "C:/Program Files/LLVM/bin/clang-format.exe",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.formatting": "Default",
+  }
+}
+```
+
 #### Configuring launch.json for debugging ####
 
 For help configuring the debugger see [Configuring launch.json for C/C++ debugging](https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md)
@@ -247,7 +266,7 @@ For help configuring the debugger see [Configuring launch.json for C/C++ debuggi
 [![CMake ](icons/CMake_icon.png)  
 By: twxs](https://marketplace.visualstudio.com/items?itemName=twxs.cmake)
 
-Provides linting and intellisense for CMake configuration files.
+Provides linting and intellisense for `CMake` configuration files.
 
 -----------------------
 
