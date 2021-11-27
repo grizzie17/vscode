@@ -65,12 +65,21 @@ or if you are using a vscode workspace add them to your
 
 ```JSON
 {
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "/c %SANDBOX%\\build.bat"
-    ],
-    "terminal.integrated.env.windows": {
-        "SANDBOX": "${workspaceFolder}"
-    }
+    "terminal.integrated.profiles.windows":{
+        "MSYS2": {
+            "path": [
+                "C:/msys64/usr/bin/bash.exe"
+            ],
+            "args":[
+                "--login",
+                "-i"
+            ],
+            "env":{
+                "CHERE_INVOKING": "1",
+                "MSYSTEM": "MINGW64"
+            }
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "MSYS2"
 }
 ```
