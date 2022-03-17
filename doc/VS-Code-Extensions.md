@@ -113,10 +113,19 @@ For a slightly different configuration from the default that matches well with C
 
 ### Bracket Pair Colorizer 2 ###
 
-[![Bracket Pair Colorizer 2](icons/bracket-pair-colorizer_icon.png)  
-By: CoenraadS](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
-
 Alternate colors for nested brackets/parenthesis.
+
+The **Bracket Pair Colorizer** has been replaced by built-in settings.
+
+```jsonc
+{
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.bracketPairColorization.enabled": true,
+}
+```
 
 -------------------
 

@@ -42,6 +42,13 @@ I like a dark theme, but good contrast (for older eyes).
   "editor.tabSize": 4,                 // number of spaces for a tab
   "editor.minimap.enabled": false,     // your choice
   "editor.minimap.renderCharacters": false,  // lots faster
+  
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.bracketPairColorization.enabled": true,
+
 }
 ```
 
@@ -121,6 +128,50 @@ To be real honest, I don't know which keymap is the "default".  I don't think th
     // don't process this "Windows" specific file
     "desktop.ini": true
   }
+}
+```
+
+
+## Terminal ##
+```jsonc
+{
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "MSYS": {
+      "path": "C:/msys64/usr/bin/bash.exe",
+      "args": [
+        "--login",
+        "-i"
+      ],
+      "env": {
+        "MSYSTEM": "MINGW64",
+        "CHERE_INVOKING": "1"
+      }
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    }
+  },
+}
+```
+
+To activate a terminal for a *Workspace* add the following to the `.code-workspace` file.
+```jsonc
+{
+	"terminal.integrated.defaultProfile.windows": "MSYS",
 }
 ```
 
